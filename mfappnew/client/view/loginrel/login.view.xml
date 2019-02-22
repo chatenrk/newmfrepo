@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<mvc:View xmlns="sap.m" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" controllerName="mfdemo_new.Controller.loginrel.login" displayBlock="true">
+	<Panel width="auto" class="sapUiSmallMargin">
+		<headerToolbar class="sapUiTinyMargin">
+			<Toolbar>
+				<Title level="H4" text="Login Page"/>
+			</Toolbar>
+		</headerToolbar>
+		<MessageStrip id="msgstrp" showIcon="false" showCloseButton="false" visible="false" type="Error" text="{errmsg&gt;/msg}" class="sapUiMediumMarginBottom">
+		</MessageStrip>
+		<VBox class="sapUiSmallMargin" id="MainFlexBox">
+			<HBox width="100%">
+				<items>
+					<HBox width="20%" class="alignDropdownAlign sapMFlexItemAlignCenter">
+						<Label text="UserName" width="auto" class="LabelText"/>
+					</HBox>
+					<VBox width="30%" direction="Column" id="__vbox15">
+						<items>
+							<Input id="user_ip"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox width="100%">
+				<items>
+					<HBox width="20%" class="alignDropdownAlign sapMFlexItemAlignCenter">
+						<Label text="Password" width="auto" class="LabelText"/>
+					</HBox>
+					<VBox width="30%" direction="Column">
+						<items>
+							<Input id="pwd_ip" type="Password"/>
+						</items>
+					</VBox>
+				</items>
+			</HBox>
+			<HBox width="100%" justifyContent="End" class="sapUiSmallMarginTop">
+				<items>
+					<Button text="Submit" class="sapUiSmallMarginEnd" press="onSubmit">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
+					<Button text="Refresh" press="onRefresh">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</layoutData>
+					</Button>
+				</items>
+			</HBox>
+		</VBox>
+	</Panel>
+</mvc:View>

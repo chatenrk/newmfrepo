@@ -33,7 +33,7 @@ mongoose.connection.on('error', function () {
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.use(bodyParser.json({
 	limit: '50mb',
