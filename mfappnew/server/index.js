@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// const users = require('./routes/users');
+const users = require('./routes/users.js');
 // const schroutes = require('./routes/schroutes');
 // const amcroutes = require('./routes/amcroutes');
 // const navroutes = require('./routes/navroutes');
