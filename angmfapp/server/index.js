@@ -8,7 +8,7 @@ const port = 3000;
 
 
 app.use(cors());
-app.use(express.static(path.join(__dirname,'../client')));
+app.use(express.static(path.join(__dirname,'../client/dist/client')));
 
 app.get('/', function(req,res){
 	res.send('Please pass the correct route');
