@@ -43,13 +43,23 @@
                     "name": "login",
                     "target": "login"
 
+                },{
+                    "pattern": "register",
+                    "name": "register",
+                    "target": "register"
+
                 }
+
 
             ],
             "targets": {
                 "login": {
                     "viewName": "loginrel/login",
                     "viewLevel": 1
+                },
+                "register":{
+                    "viewName":"loginrel/register",
+                    "viewLevel":1
                 }
 
             }
