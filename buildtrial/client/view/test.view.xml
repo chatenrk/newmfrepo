@@ -1,0 +1,59 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="build_test.controller.test" xmlns:f="sap.f" xmlns="sap.m" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:core="sap.ui.core">
+<f:DynamicPage headerExpanded="true" showFooter="false" class="sapUiSizeCompact">
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:actions>
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://action" type="Transparent"/>
+                </f:actions>
+            </f:DynamicPageTitle>
+        </f:title>
+        </f:DynamicPage>
+       <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <f:content>
+                    <filterbar:FilterBar id="ListReportFilterBar" useToolbar="false" showGoOnFB="true" searchEnabled="true">
+                        <filterbar:filterItems>
+                            <filterbar:FilterItem label="Editing Statuses" name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-sap_ui_comp_filterbar_FilterItem-1489995636150---0">
+                                <filterbar:control>
+                                    <ComboBox selectedKey="All" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{path:'/EditStatusesSet', templateShareable:true}">
+                                        <items>
+                                            <core:Item text="{ID}" enabled="true" key="{ID}"/>
+                                        </items>
+                                    </ComboBox>
+                                </filterbar:control>
+                            </filterbar:FilterItem>
+                            <filterbar:FilterItem label="Supplier" name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_StandardFilter-1---0">
+                                <filterbar:control>
+                                    <MultiInput/>
+                                </filterbar:control>
+                            </filterbar:FilterItem>
+                            <filterbar:FilterItem label="Average Rating" name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-sap_ui_comp_filterbar_FilterItem-1489995586551---0">
+                                <filterbar:control>
+                                    <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                </filterbar:control>
+                            </filterbar:FilterItem>
+                            <filterbar:FilterItem label="Price Range" name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_ComboBoxFilter-1489995607618---0">
+                                <filterbar:control>
+                                    <MultiComboBox items="{path:'/PriceRangesSet', templateShareable:true}">
+                                        <items>
+                                            <core:Item key="{ID}" text="{ID}"/>
+                                        </items>
+                                    </MultiComboBox>
+                                </filterbar:control>
+                            </filterbar:FilterItem>
+                            <filterbar:FilterItem label="Category" name="Fiori_ListReport_ListReport_0-filterBars-Fiori_ListReport_FilterBar-1-filters-Fiori_ListReport_ComboBoxFilter-1489995623522---0">
+                                <filterbar:control>
+                                    <MultiComboBox items="{path:'/MainCategoriesSet', templateShareable:true}">
+                                        <items>
+                                            <core:Item key="{ID}" text="{ID}"/>
+                                        </items>
+                                    </MultiComboBox>
+                                </filterbar:control>
+                            </filterbar:FilterItem>
+                        </filterbar:filterItems>
+                    </filterbar:FilterBar>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header> 
+</mvc:View>
