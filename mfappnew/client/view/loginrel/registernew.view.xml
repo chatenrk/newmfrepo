@@ -1,0 +1,80 @@
+<View xmlns="sap.m" controllerName="mfdemo_new.controller.loginrel.registernew">
+    <Page>
+        <content>
+            <Panel width="auto" class="sapUiSmallMargin border-0">
+                <headerToolbar class="sapUiTinyMargin">
+                    <Toolbar>
+                        <Title level="H4" text="Registration Page" />
+                    </Toolbar>
+                </headerToolbar>
+
+                <MessageStrip id="msgstrp" showIcon="false" showCloseButton="false" visible= "false" type="Error" text="{errmsg>/msg}" class="sapUiMediumMarginBottom">
+                </MessageStrip>
+
+                <VBox class="sapUiSmallMargin" id="MainFlexBox">
+
+                    <!-- Email Id for registration -->
+                    <HBox width="100%">
+                        <items>
+                            <HBox width="20%" class="alignDropdownAlign sapMFlexItemAlignCenter">
+                                <Label text="Email" width="auto" class="LabelText"/>
+                            </HBox>
+
+                            <VBox width="30%" direction="Column">
+                                <items>
+                                    <Input id = "email_ip" type="Email" />
+                                </items>
+                            </VBox>
+                        </items>
+                    </HBox>
+
+                    <!-- Password Field  -->
+                    <HBox width="100%">
+                        <items>
+                            <HBox width="20%" class="alignDropdownAlign sapMFlexItemAlignCenter">
+                                <Label text="Password" width="auto" class="LabelText" />
+                            </HBox>
+                            <VBox width="30%" direction="Column">
+                                <items>
+                                    <Input id = "pwd_ip" type="Password" />
+
+                                </items>
+                            </VBox>
+                        </items>
+                    </HBox>
+
+                    <!-- Confirm password field -->
+                    <HBox width="100%">
+                        <items>
+                            <HBox width="20%" class="alignDropdownAlign sapMFlexItemAlignCenter">
+                                <Label text="Confirm Password" width="auto" class="LabelText" />
+                            </HBox>
+                            <VBox width="30%" direction="Column">
+                                <items>
+                                    <Input id = "cpwd_ip" type="Password" />
+                                </items>
+                            </VBox>
+                        </items>
+                    </HBox>
+                    <!-- Buttons area -->
+                    <HBox width="100%" justifyContent="End" class="sapUiSmallMarginTop">
+                        <items>
+                            <Button text="Submit" type="Submit" class="sapUiSmallMarginEnd" press="onSubmit">
+                                <layoutData>
+                                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                                </layoutData>
+                            </Button>
+                            <Button text="Refresh" type="Refresh" press="onRefresh">
+                                <layoutData>
+                                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                                </layoutData>
+                            </Button>
+                        </items>
+                    </HBox>
+
+                </VBox>
+
+            </Panel>
+        </content>
+    </Page>
+</View>

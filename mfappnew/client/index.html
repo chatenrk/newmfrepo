@@ -15,19 +15,23 @@
         }'
     ></script>
 
+    <!-- Add the Firebase Authentication JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
     <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
     <script>
       sap.ui.getCore().attachInit(function() {
         var oComponentContainer = new sap.ui.core.ComponentContainer({
-          height: "100%",
-          name: "mfdemo_new"
+          height: '100%',
+          name: 'mfdemo_new'
         });
         var shell = new sap.m.Shell({
-          id: "myshell",
+          id: 'myshell',
           app: oComponentContainer
         });
-        shell.placeAt("content");
+        shell.placeAt('content');
       });
     </script>
   </head>

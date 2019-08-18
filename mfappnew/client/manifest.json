@@ -1,71 +1,66 @@
 {
+  "_version": "1.3.0",
+  "sap.app": {
     "_version": "1.3.0",
-    "sap.app": {
-        "_version": "1.3.0",
-        "id": "mfdemo_new",
-        "type": "application",
-        "applicationVersion": {
-            "version": "1.0.0"
-        }
-
-    },
-    "sap.ui": {
-        "_version": "1.3.0",
-        "technology": "UI5",
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        },
-        "supportedThemes": [
-            "sap_bluecrystal"
-        ]
-    },
-    "sap.ui5": {
-        "_version": "1.2.0",
-        "rootView": "mfdemo_new.view.app",
-        "models": {
-            "usrlgn_model": {
-                "type": "sap.ui.model.json.JSONModel"
-            }
-        },
-        "routing": {
-            "config": {
-                "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "viewPath": "mfdemo_new.view",
-                "controlId": "rootControl",
-                "controlAggregation": "pages",
-                "transition": "slide"
-            },
-            "routes": [{
-                    "pattern": "",
-                    "name": "login",
-                    "target": "login"
-
-                },{
-                    "pattern": "register",
-                    "name": "register",
-                    "target": "register"
-
-                }
-
-
-            ],
-            "targets": {
-                "login": {
-                    "viewName": "loginrel/login",
-                    "viewLevel": 1
-                },
-                "register":{
-                    "viewName":"loginrel/register",
-                    "viewLevel":1
-                }
-
-            }
-
-
-
-        }
+    "id": "mfdemo_new",
+    "type": "application",
+    "applicationVersion": {
+      "version": "1.0.0"
     }
+  },
+  "sap.ui": {
+    "_version": "1.3.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": ["sap_bluecrystal"]
+  },
+  "sap.ui5": {
+    "_version": "1.2.0",
+    "rootView": "mfdemo_new.view.app",
+    "models": {
+      "usrlgn_model": {
+        "type": "sap.ui.model.json.JSONModel"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "mfdemo_new.view",
+        "controlId": "rootControl",
+        "controlAggregation": "pages",
+        "transition": "slide"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "login",
+          "target": "login"
+        },
+        {
+          "pattern": "register",
+          "name": "register",
+          "target": "registernew"
+        }
+      ],
+      "targets": {
+        "login": {
+          "viewName": "loginrel/login",
+          "viewLevel": 1
+        },
+        "register": {
+          "viewName": "loginrel/register",
+          "viewLevel": 1
+        },
+        "registernew": {
+          "viewName": "loginrel/registernew",
+          "viewLevel": 1
+        }
+      }
+    }
+  }
 }
